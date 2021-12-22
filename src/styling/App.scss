@@ -1,5 +1,21 @@
 @import "~bootstrap/scss/bootstrap";
 
+$font-blue: #61dbfb;
+$font-white: whitesmoke;
+
+@mixin normal-link {
+  a {
+    font-family: 'Rajdhani', sans-serif;
+    color: $font-blue;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $font-white;
+  }
+}
+
 // Common styling
 body,
 ul,
@@ -12,7 +28,7 @@ a,
 div {
   margin: 0;
   padding: 0;
-  color: #61dbfb;
+  color: $font-blue;
   font-family: "Megrim", cursive;
   letter-spacing: 2px;
   list-style-type: none;
@@ -48,7 +64,14 @@ button {
 
 .font-non-title {
   font-family: 'Rajdhani', sans-serif;
-  color: whitesmoke;
+  color: $font-white;
+  padding-top: 3rem;
+  .row {
+    font-family: 'Rajdhani', sans-serif;
+    color: $font-white;
+    padding: 2rem;
+  }
+  @include normal-link()
 }
 
 // Header component

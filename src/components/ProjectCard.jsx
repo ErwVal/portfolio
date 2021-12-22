@@ -3,11 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaReact, FaSass, FaGit, FaBootstrap } from "react-icons/fa";
-import {
-  SiTypescript,
-  SiCsharp,
-  SiPostgresql,
-} from "react-icons/si";
+import { SiTypescript, SiCsharp, SiPostgresql } from "react-icons/si";
 
 export const ProjectCard = () => {
   const { ref, inView } = useInView();
@@ -36,13 +32,49 @@ export const ProjectCard = () => {
       <motion.h2 id="projects" className="subheading" animate={animationLeft}>
         Projects
       </motion.h2>
+
       <motion.div className="container projects">
         <motion.h2 animate={animationLeft}>Hotel Management Website</motion.h2>
-        <motion.img
-          src="/portfolio-images/portfolio-hotel-app-2.png"
-          alt="hotel-app-home-page"
-          animate={animationRight}
-        />
+        <motion.div class="embed-responsive embed-responsive-16by9 " animate={animationRight}>
+          <Row>
+            <Col className="font-non-title">
+              <Row>
+                A hotel website in with a React-TS frontend and C# backend with
+                a PostgreSQL relational database.
+              </Row>
+
+              <Row>Authentication is handled with JSON Web Tokens.</Row>
+              <Row>
+                Bootstrap, Sass, and Framer-Motion used for styling and
+                animations.{" "}
+              </Row>
+
+              <Row>
+                <span>
+                  See the project on{" "}
+                  <a href="https://github.com/ErwVal/Hotel-Management-Website">
+                    {" "}
+                    Github
+                  </a>
+                </span>
+              </Row>
+            </Col>
+            <Col>
+              <motion.video
+                controls
+                poster="/demo1.png"
+                width="640"
+                height="480"
+                animate={animationRight}
+              >
+                <source src="demo2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </motion.video>
+            </Col>
+          </Row>
+        </motion.div>
+        <br />
+
         <motion.div animate={animationRight}>
           <Row>
             <Col>
