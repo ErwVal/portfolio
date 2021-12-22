@@ -7,7 +7,7 @@ To see this app hosted go to: https://erwin-valdez.herokuapp.com
 
 ## Description
 
-The app uses a **ReactJS** front-end. I used **Sass**, **Bootstrap**, and **framer motion** for styling. 
+**React-JS** front-end. **Sass**, **Bootstrap**, and **framer motion** for styling. 
 
 **Git** was used to handle version control throughout development.
 
