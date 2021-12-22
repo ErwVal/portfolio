@@ -47,7 +47,7 @@ export const Contact = () => {
       </motion.h2>
       <motion.div
         id="contact"
-        className="container"  
+        className="container form-container"  
         animate={animationRight}
       >
         <Form onSubmit={handleSubmit} className="form">
@@ -67,7 +67,6 @@ export const Contact = () => {
         </Form>
         <br/>
         <br/>
-        {/* <a href="#home">Go to the top</a> */}
       </motion.div>
     </div>
   );

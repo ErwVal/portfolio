@@ -66,6 +66,7 @@ export const ProjectCard = () => {
                 width="640"
                 height="480"
                 animate={animationRight}
+                className="hotel-video"
               >
                 <source src="demo2.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -75,7 +76,7 @@ export const ProjectCard = () => {
         </motion.div>
         <br />
 
-        <motion.div animate={animationRight}>
+        <motion.div animate={animationRight} className="div-icons">
           <Row>
             <Col>
               <FaReact className="icon-react icon" size={50} />{" "}

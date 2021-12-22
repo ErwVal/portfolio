@@ -1,11 +1,17 @@
 @import "~bootstrap/scss/bootstrap";
 
+// Font colour
 $font-blue: #61dbfb;
 $font-white: whitesmoke;
 
+// Screen sizes
+$mobile: 430px;
+$tablet: 810px;
+
+// Basic mixin
 @mixin normal-link {
   a {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Rajdhani", sans-serif;
     color: $font-blue;
     background-color: transparent;
     text-decoration: none;
@@ -63,6 +69,13 @@ body {
   );
 }
 
+// Prevent horizontal scrolling
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 button {
   color: white;
   padding: 10px 30px;
@@ -75,22 +88,22 @@ button {
   opacity: 0.7;
 }
 .container {
-  margin: 5rem auto 15rem;
+  margin: 7rem auto 15rem;
   text-align: center;
 }
 
 // Font for non-titles
 
 .font-non-title {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   color: $font-white;
   padding-top: 3rem;
   .row {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Rajdhani", sans-serif;
     color: $font-white;
     padding: 2rem;
   }
-  @include normal-link()
+  @include normal-link();
 }
 
 // Header component
@@ -132,21 +145,31 @@ header {
     border: 3px solid white;
     margin: 30px 20px;
   }
+  @media only screen and (max-width: $mobile) {
+    h1 {
+      font-size: 4rem;
+      padding-bottom: 4rem;
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 .subheading {
-    padding-left: 3rem;
+  padding-left: 3rem;
 }
 
 .projects {
-    margin: 2rem auto 7rem;
+  margin: 2rem auto 7rem;
 }
 
 .about {
-    margin: 2rem auto 7rem;
-    li {
-      padding: 2rem;
-    }
+  margin: 2rem auto 7rem;
+  li {
+    padding: 2rem;
+  }
 }
 
 // Projects component
@@ -156,23 +179,49 @@ header {
   margin: 4rem;
 }
 
-// Contact 
-
-.form {
-  margin-inline: 20rem;
+.hotel-video {
+  @media only screen and (max-width: $mobile) {
+    width: 95vw;
+  }
 }
 
-.form-control {
-  color: $font-white;
-  opacity: 1;
-  background-color: transparent;
-  text-align: center;
- 
-} 
+// Contact
 
-.form-control::placeholder {
-  color: $font-white;
-  opacity: 0.8;
+.form-container {
+  margin-bottom: 7rem;
+  .form {
+    margin-inline: 20rem;
+  }
+
+  .form-control {
+    color: $font-white;
+    opacity: 1;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  .form-control::placeholder {
+    color: $font-white;
+    opacity: 0.8;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    .form {
+      margin-inline: 5rem;
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    .form {
+      margin-inline: 2rem;
+    }
+    .btn {
+      font-size: small;
+    }
+    .form-control {
+      font-size: small;
+    }
+  }
 }
 
 // Icons
@@ -207,4 +256,12 @@ header {
 
 .icon-git {
   color: #f96d00;
+}
+
+@media only screen and (max-width: $mobile) {
+
+    svg {
+      padding: 1rem;
+    }
+  
 }
