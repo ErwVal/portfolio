@@ -16,6 +16,24 @@ $font-white: whitesmoke;
   }
 }
 
+@mixin button-style {
+  .btn {
+    background-color: transparent;
+    color: $font-blue;
+    border-width: 0;
+    opacity: 1;
+  }
+  .btn:hover {
+    color: $font-white;
+    background-color: transparent;
+    border-color: $font-blue;
+    opacity: 1;
+  }
+  a:hover {
+    color: $font-white;
+  }
+}
+
 // Common styling
 body,
 ul,
@@ -33,6 +51,7 @@ div {
   letter-spacing: 2px;
   list-style-type: none;
   text-decoration: none;
+  @include button-style();
 }
 
 body {
@@ -135,6 +154,25 @@ header {
   max-width: 30rem;
   border-radius: 10%;
   margin: 4rem;
+}
+
+// Contact 
+
+.form {
+  margin-inline: 20rem;
+}
+
+.form-control {
+  color: $font-white;
+  opacity: 1;
+  background-color: transparent;
+  text-align: center;
+ 
+} 
+
+.form-control::placeholder {
+  color: $font-white;
+  opacity: 0.8;
 }
 
 // Icons

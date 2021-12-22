@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Form, Row } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Form, Row, Button } from "react-bootstrap";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -26,6 +26,16 @@ export const Contact = () => {
     }
   });
 
+  const[firstName, setFirstName] = useState("");
+  const[lastName, setLastName] = useState("");
+  const[email, setEmail] = useState("");
+  const[message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // send form
+  }
+
   return (
     <div ref={ref}>
       <motion.h2
@@ -40,23 +50,24 @@ export const Contact = () => {
         className="container"  
         animate={animationRight}
       >
-        <Form className="form">
+        <Form onSubmit={handleSubmit} className="form">
           <Row>
-            <Form.Control placeholder="First name" />
+            <Form.Control placeholder="First name" onChange={(e) => setFirstName(e)} />
           </Row>
           <Row>
-            <Form.Control placeholder="Last name" />
+            <Form.Control placeholder="Last name" onChange={(e) => setLastName(e)}/>
           </Row>
           <Row>
-            <Form.Control type="email" placeholder="e-mail" />
+            <Form.Control type="email" placeholder="e-mail" onChange={(e) => setEmail(e)}/>
           </Row>
           <Row>
-            <Form.Control type="text" placeholder="Message" />
+            <Form.Control type="text" placeholder="Message" onChange={(e) => setMessage(e)}/>
           </Row>
+          <Button type="submit">Send</Button> <Button><a href="#home">Go to the top</a></Button>
         </Form>
         <br/>
         <br/>
-        <a href="#home">Go to the top</a>
+        {/* <a href="#home">Go to the top</a> */}
       </motion.div>
     </div>
   );
