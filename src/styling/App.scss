@@ -87,10 +87,6 @@ button {
   cursor: pointer;
   opacity: 0.7;
 }
-.container {
-  margin: 7rem auto 15rem;
-  text-align: center;
-}
 
 // Font for non-titles
 
@@ -127,9 +123,68 @@ header {
   }
 }
 
+.div-navbar {
+  padding: 2rem;
+  @media only screen and (max-width: $mobile) {
+    .div-navbar {
+      padding: 1rem;
+    }
+  }
+
+  .navbar-toggler {
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+}
+
+.navbar-dark .navbar-toggler {
+  color: $font-blue;
+  border-color: $font-blue;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0;
+}
+
+.navbar-toggler:hover {
+  border-color: $font-white;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: $font-blue;
+}
+
+.navbar-dark .navbar-brand {
+  color: $font-blue;
+  :hover {
+    color: $font-white;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: $font-blue;
+  padding-right: 1.5rem;
+  :hover {
+    color: $font-white;
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: $font-blue;
+}
+
+.navbar-dark .navbar-text {
+  font-size: 2rem;
+  color: $font-blue;
+}
+
 // Welcome component
 
 .welcome {
+  margin: 5rem auto 10rem;
+  text-align: center;
+  text-align: center;
   h1 {
     font-size: 5rem;
     padding-bottom: 4rem;
@@ -161,18 +216,13 @@ header {
   padding-left: 3rem;
 }
 
+// Projects
+
 .projects {
   margin: 2rem auto 7rem;
+  text-align: center;
 }
 
-.about {
-  margin: 2rem auto 7rem;
-  li {
-    padding: 2rem;
-  }
-}
-
-// Projects component
 .projects img {
   max-width: 30rem;
   border-radius: 10%;
@@ -185,10 +235,21 @@ header {
   }
 }
 
+// About
+
+.about {
+  margin: 2rem auto 7rem;
+  text-align: center;
+  li {
+    padding: 2rem;
+  }
+}
+
 // Contact
 
 .form-container {
-  margin-bottom: 7rem;
+  margin: 2rem auto 7rem;
+  text-align: center;
   .form {
     margin-inline: 20rem;
   }
@@ -259,9 +320,7 @@ header {
 }
 
 @media only screen and (max-width: $mobile) {
-
-    svg {
-      padding: 1rem;
-    }
-  
+  svg {
+    padding: 1rem;
+  }
 }

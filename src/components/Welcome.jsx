@@ -52,7 +52,7 @@ export const Welcome = () => {
   return (
     <motion.div
       id="welcome"
-      className="container welcome"
+      className="welcome"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 
 const headerVariants = {
   hidden: {
@@ -19,19 +20,21 @@ const headerVariants = {
 
 export const Header = () => {
   return (
-    <motion.header
-    variants={headerVariants}
-    initial="hidden"
-    animate="visible">
-      <div>
-        <h1 id="home">EV</h1>
-      </div>
-      <div className="navegation">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href='/somefile.txt' download>CV</a>
-      </div>
-    </motion.header>
+    <motion.div variants={headerVariants} initial="hidden" animate="visible" className="div-navbar">
+      <Navbar collapseOnSelect expand="sm" variant="dark" bg="transparent">
+        <Container>
+          <Navbar.Text id="home">EV</Navbar.Text>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto"></Nav>
+            <Nav>
+              <Nav.Link href="#projects">Projects</Nav.Link>
+              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </motion.div>
   );
 };
