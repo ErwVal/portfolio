@@ -35,18 +35,28 @@ export const ProjectCard = () => {
 
       <motion.div className="container projects">
         <motion.h2 animate={animationLeft}>Hotel Management Website</motion.h2>
-        <motion.div class="embed-responsive embed-responsive-16by9 " animate={animationRight}>
+        <motion.div
+          class="embed-responsive embed-responsive-16by9 "
+          animate={animationRight}
+        >
           <Row>
             <Col className="font-non-title">
               <Row>
-                A hotel website in with a React-TS frontend and C# backend with
-                a PostgreSQL relational database.
+                <span>
+                  {" "}
+                  A hotel website in with a React-TS frontend and C# backend
+                  with a PostgreSQL relational database.
+                </span>
               </Row>
 
-              <Row>Authentication is handled with JSON Web Tokens.</Row>
               <Row>
-                Bootstrap, Sass, and Framer-Motion used for styling and
-                animations.{" "}
+                <span>Authentication is handled with JSON Web Tokens.</span>
+              </Row>
+              <Row>
+                <span>
+                  Bootstrap, Sass, and Framer-Motion used for styling and
+                  animations.
+                </span>
               </Row>
 
               <Row>
