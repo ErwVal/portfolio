@@ -5,6 +5,10 @@ A personal website to showcase my work.
 
 To see this app hosted go to: https://erwin-valdez.herokuapp.com
 
+## Screenshot
+
+<img width="928" alt="demo3" src="https://user-images.githubusercontent.com/85710692/147293052-a4c1152d-87fb-49e1-a6e3-177645b704c9.png">
+
 ## Description
 
 **React-JS** front-end. **Sass**, **Bootstrap**, and **framer motion** for styling. 
