@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Form, Row, Button } from "react-bootstrap";
+import React, { useEffect } from "react";
+import { Col, Row, Button } from "react-bootstrap";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Contact = () => {
-
   const { ref, inView } = useInView();
   const animationLeft = useAnimation();
   const animationRight = useAnimation();
@@ -13,7 +13,7 @@ export const Contact = () => {
     if (inView) {
       animationLeft.start({
         x: 0,
-        transition: { delay: 0.1, duration: 1.5, when: "beforeChildren"  },
+        transition: { delay: 0.1, duration: 1.5, when: "beforeChildren" },
       });
 
       animationRight.start({
@@ -26,47 +26,37 @@ export const Contact = () => {
     }
   });
 
-  const[firstName, setFirstName] = useState("");
-  const[lastName, setLastName] = useState("");
-  const[email, setEmail] = useState("");
-  const[message, setMessage] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // send form
-  }
-
   return (
     <div ref={ref}>
-      <motion.h2
-      id="contact"
-      className="subheading"
-        animate={animationLeft}
-      >
-        Contact
+      <motion.h2 id="contact" className="subheading" animate={animationLeft}>
+        Media
       </motion.h2>
       <motion.div
         id="contact"
-        className="container form-container"  
+        className="container form-container"
         animate={animationRight}
       >
-        <Form onSubmit={handleSubmit} className="form">
-          <Row>
-            <Form.Control placeholder="First name" onChange={(e) => setFirstName(e)} />
-          </Row>
-          <Row>
-            <Form.Control placeholder="Last name" onChange={(e) => setLastName(e)}/>
-          </Row>
-          <Row>
-            <Form.Control type="email" placeholder="e-mail" onChange={(e) => setEmail(e)}/>
-          </Row>
-          <Row>
-            <Form.Control type="text" placeholder="Message" onChange={(e) => setMessage(e)}/>
-          </Row>
-          <Button type="submit">Send</Button> <Button><a href="#home">Go to the top</a></Button>
-        </Form>
-        <br/>
-        <br/>
+        <Row>
+          <Col>
+            <a href="https://github.com/ErwVal">
+              {" "}
+              <FaGithub className="icon-github icon" size={50} />
+            </a>
+          </Col>
+          <Col>
+            <a href="www.linkedin.com/in/erwin-rosas-valdez">
+              {" "}
+              <FaLinkedin className="icon-linkedin icon" size={50} />
+            </a>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Button>
+              <a href="#home">Go to the top</a>
+            </Button>
+          </Col>
+        </Row>
       </motion.div>
     </div>
   );

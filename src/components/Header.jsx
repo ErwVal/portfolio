@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
 const headerVariants = {
   hidden: {
@@ -30,7 +30,7 @@ export const Header = () => {
             <Nav>
               <Nav.Link href="#projects">Projects</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link href="#contact">Media</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

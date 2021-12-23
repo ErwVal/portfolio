@@ -11,7 +11,7 @@ export const AboutMe = () => {
     if (inView) {
       animationLeft.start({
         x: 0,
-        transition: { delay: 0.1, duration: 1.5, when: "beforeChildren"  },
+        transition: { delay: 0.1, duration: 1.5, when: "beforeChildren" },
       });
 
       animationRight.start({
@@ -29,16 +29,27 @@ export const AboutMe = () => {
       <motion.h2 id="about" className="subheading" animate={animationLeft}>
         About me
       </motion.h2>
-      <motion.div id="about" className="container about" animate={animationRight}>
+      <motion.div
+        id="about"
+        className="container about"
+        animate={animationRight}
+      >
         <ul className="font-non-title">
-          <li>Completed a 12-week full-stack development bootcamp.</li>
           <li>
             {" "}
-            Experience in TypeScript,
-            C#, Python, and R.
+            I'm a software developer with experience in React, TypeScript, C#,
+            PostgreSQL, Bootstrap, Sass, etc.
           </li>
           <li>
-            React, CRUD, APIs, PostgreSQL, Entity Framework. 
+            I recently completed a 12-week full-stack development bootcamp.
+          </li>
+          <li>
+            My previous experience consists on 5 years doing data analysis and
+            working with geographical information systems.
+          </li>{" "}
+          <li>
+            I also have a year and a half of experience teaching Python, Statistics, and R at
+            University College London.
           </li>
         </ul>
       </motion.div>
