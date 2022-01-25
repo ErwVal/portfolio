@@ -3,7 +3,8 @@ A personal website to showcase my work.
 
 ## Live version
 
-To see this app hosted go to: https://erwin-valdez.herokuapp.com
+To see this app hosted go to: https://erwin-valdez.herokuapp.com 
+NOTE: If the website does not render correctly, simply refresh the page.
 
 ## Screenshot
 
